@@ -14,3 +14,5 @@ use App\Http\Controllers\ConfiguratorController;
 */
 
 Route::get('/', [ConfiguratorController::class, 'index']);
+
+Route::post('/calculate', [ConfiguratorController::class, 'calculate']);
