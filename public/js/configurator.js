@@ -59,11 +59,11 @@ $(".calculate").on('click', function () {
                   )
                 return;
             }
-                
+            var count = 1;
             $.each( response, function( key, phone ) {
-                console.log(phone);
+                console.log(count);
                 $("#top-phones").append(` <tr>
-                <th scope="row">` + key + `</th>
+                <th scope="row">` + count + `</th>
                 <td>` + phone.brand + `</td>
                 <td>` + phone.model + `</td>
                 <td>` + phone.operating_system + `</td>
@@ -71,6 +71,7 @@ $(".calculate").on('click', function () {
                 <td>` + phone.storage + ` GB</td>
                 <td>` + phone.screen + ` inch</td>
               </tr>`);
+                count++;
             });
 
             carousel.carousel('next');
